@@ -1,13 +1,103 @@
-.home{
-    height: 100vh;
-    background-position: center;
-    background-size: 100%;
-    padding-block: 30px;
+.home {
+  min-height: 100vh;
+  background-image: url("./home/background-home-desktop.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-block: 30px;
+}
+@media screen and (max-width: 900px) {
+  .home {
+    background-image: url("./home/background-home-tablet.jpg");
+    padding-block: 0px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .home {
+    background-image: url("./home/background-home-mobile.jpg");
+    padding-block: 0px;
+  }
 }
 
-@media screen and (max-width: 800px) {
-    .home{
-        padding-block: 0px;
+/* container */
+.home-container{
+    width: 90%;
+    max-width: 1200px;
+    margin-inline: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 140px;
+}
+@media screen and (max-width: 900px) {
+    .home-container{
+        flex-direction: column;
+        margin-top: 60px;
+        align-items: center;
+        padding-bottom: 90px;
     }
-    
+}
+@media screen and (max-width: 550px) {
+    .home-container{
+        padding-bottom: 20px;
+    }
+}
+.home-group-text{
+    width: 60%;
+    max-width: 500px;
+    text-align: justify;
+}
+@media screen and (max-width: 900px) {
+    .home-group-text{
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+    }
+}
+/*Btn */
+.home-main-btn {
+  position: relative;
+  display: block;
+  width: 272px;
+  height: 272px;
+  border-radius: 100%;
+  color: var(--dark-clr);
+  font-family: var(--font-bellefair);
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  z-index: 10;
+}
+.home-main-btn::before {
+  content: "";
+  opacity: 15%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white-transparent-clr);
+  z-index: -20;
+  transition: width 0.2s ease-in, height 0.2s ease-in;
+}
+.home-main-btn:hover::before {
+  width: 170%;
+  height: 170%;
+  transition: width 0.3s ease-out, height 0.3s ease-out;
+}
+@media screen and (max-width: 900px) {
+    .home-main-btn{
+       margin-top: 150px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .home-main-btn{
+       width: 150px;
+       height: 150px;
+       font-size: 1.25rem;
+       margin-top: 60px;
+    }
 }

@@ -1,4 +1,5 @@
-/* Reset css */
+/*************************************************
+*************************************** Reset css */
 /* Box sizing rules */
 *,
 *::before,
@@ -31,7 +32,7 @@ ol {
   padding-inline-start: 0px;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -70,9 +71,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -80,5 +81,141 @@ select {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/*************************************************
+*************************************** Variable */
+:root {
+  /* Colors */
+  --dark-clr: #0b0d17;
+  --primary-clr: #d0d6f9;
+  --white-clr: #ffffff;
+  --white-transparent-clr: rgba(255, 255, 255, 0.4);
+
+  /* Font fam */
+  --font-barlow: "Barlow", sans-serif;
+  --font-barlow-C: "Barlow Condensed", sans-serif;
+  --font-bellefair: "Bellefair", serif;
+}
+
+/*************************************************
+*************************************** Typographie */
+/* Heading */
+.heading-1 {
+  color: var(--white-clr);
+  font-size: 9.375rem;
+  font-family: var(--font-bellefair);
+  text-transform: uppercase;
+}
+.heading-2 {
+  color: var(--white-clr);
+  font-size: 6.25rem;
+  font-family: var(--font-bellefair);
+  text-transform: uppercase;
+}
+.heading-3 {
+  color: var(--white-clr);
+  font-size: 3.5rem;
+  font-family: var(--font-bellefair);
+  text-transform: uppercase;
+}
+.heading-4 {
+  color: var(--white-clr);
+  font-size: 2rem;
+  font-family: var(--font-bellefair);
+  text-transform: uppercase;
+}
+.heading-5 {
+  color: var(--primary-clr);
+  font-size: 1.75rem;
+  letter-spacing: 4.75px;
+  font-family: var(--font-barlow-C);
+  text-transform: uppercase;
+}
+
+/* Subheading */
+.subheading-1 {
+  color: var(--white-clr);
+  font-size: 1.75rem;
+  font-family: var(--font-bellefair);
+}
+.subheading-2 {
+  color: var(--white-clr);
+  font-size: 0.875rem;
+  letter-spacing: 2.35px;
+  font-family: var(--font-barlow-C);
+}
+
+/* body text */
+.text {
+  font-size: 1.125rem;
+  font-family: var(--font-barlow);
+  line-height: 1.5em;
+  color: var(--white-clr);
+  letter-spacing: 0.05em;
+}
+
+@media screen and (max-width: 900px) {
+  /* Heading */
+  .heading-1 {
+    font-size: 9.375rem;
+  }
+  .heading-2 {
+    font-size: 5rem;
+  }
+  .heading-3 {
+    font-size: 3.5rem;
+  }
+  .heading-4 {
+    font-size: 2rem;
+  }
+  .heading-5 {
+    font-size: 1.25rem;
+  }
+
+  /* Subheading */
+  .subheading-1 {
+    font-size: 1.75rem;
+  }
+  .subheading-2 {
+    font-size: 0.875rem;
+  }
+
+  /* body text */
+  .text {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  /* Heading */
+  .heading-1 {
+    font-size: 5rem;
+  }
+  .heading-2 {
+    font-size: 6.25rem;
+  }
+  .heading-3 {
+    font-size: 3.5rem;
+  }
+  .heading-4 {
+    font-size: 2rem;
+  }
+  .heading-5 {
+    font-size: 1rem;
+  }
+
+  /* Subheading */
+  .subheading-1 {
+    font-size: 1.75rem;
+  }
+  .subheading-2 {
+    font-size: 0.875rem;
+  }
+
+  /* body text */
+  .text {
+    font-size: .9375rem;
+    line-height: 1.7rem;
   }
 }

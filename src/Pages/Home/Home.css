@@ -1,0 +1,13 @@
+.home{
+    height: 100vh;
+    background-position: center;
+    background-size: 100%;
+    padding-block: 30px;
+}
+
+@media screen and (max-width: 800px) {
+    .home{
+        padding-block: 0px;
+    }
+    
+}

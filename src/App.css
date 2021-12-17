@@ -106,30 +106,39 @@ select {
   color: var(--white-clr);
   font-size: 9.375rem;
   font-family: var(--font-bellefair);
+  font-weight: 400;
   text-transform: uppercase;
 }
 .heading-2 {
   color: var(--white-clr);
   font-size: 6.25rem;
   font-family: var(--font-bellefair);
+  font-weight: 400;
   text-transform: uppercase;
 }
 .heading-3 {
   color: var(--white-clr);
   font-size: 3.5rem;
   font-family: var(--font-bellefair);
+  font-weight: 400;
   text-transform: uppercase;
 }
 .heading-4 {
   color: var(--white-clr);
   font-size: 2rem;
   font-family: var(--font-bellefair);
+  font-weight: 400;
   text-transform: uppercase;
+}
+.heading-4 span{
+  color: var(--white-transparent-clr);
+  margin-right: 15px;
 }
 .heading-5 {
   color: var(--primary-clr);
   font-size: 1.75rem;
   letter-spacing: 4.75px;
+  font-weight: 400;
   font-family: var(--font-barlow-C);
   text-transform: uppercase;
 }
@@ -139,21 +148,39 @@ select {
   color: var(--white-clr);
   font-size: 1.75rem;
   font-family: var(--font-bellefair);
+  font-weight: 400;
+  text-transform: uppercase;
 }
 .subheading-2 {
   color: var(--white-clr);
   font-size: 0.875rem;
+  font-weight: 400;
   letter-spacing: 2.35px;
   font-family: var(--font-barlow-C);
+  text-transform: uppercase;
 }
 
 /* body text */
 .text {
   font-size: 1.125rem;
   font-family: var(--font-barlow);
-  line-height: 1.5em;
+  line-height: 2em;
   color: var(--white-clr);
   letter-spacing: 0.05em;
+}
+
+/* Nav Text */
+.nav-text {
+  color: var(--white-clr);
+  font-size: 1rem;
+  letter-spacing: 2.7px;
+  font-family: var(--font-barlow-C);
+  text-transform: uppercase;
+}
+
+/* Text blue */
+.text-blue{
+  color: var(--primary-clr);
 }
 
 @media screen and (max-width: 900px) {
@@ -168,16 +195,13 @@ select {
     font-size: 3.5rem;
   }
   .heading-4 {
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
   .heading-5 {
     font-size: 1.25rem;
   }
 
   /* Subheading */
-  .subheading-1 {
-    font-size: 1.75rem;
-  }
   .subheading-2 {
     font-size: 0.875rem;
   }
@@ -185,6 +209,7 @@ select {
   /* body text */
   .text {
     font-size: 1rem;
+    line-height: 1.8em;
   }
 }
 @media screen and (max-width: 550px) {
@@ -193,22 +218,19 @@ select {
     font-size: 5rem;
   }
   .heading-2 {
-    font-size: 6.25rem;
+    font-size: 3.5rem;
   }
   .heading-3 {
     font-size: 3.5rem;
   }
   .heading-4 {
-    font-size: 2rem;
+    font-size: 1rem;
   }
   .heading-5 {
     font-size: 1rem;
   }
 
   /* Subheading */
-  .subheading-1 {
-    font-size: 1.75rem;
-  }
   .subheading-2 {
     font-size: 0.875rem;
   }
@@ -217,5 +239,57 @@ select {
   .text {
     font-size: .9375rem;
     line-height: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  /* Heading */
+  .heading-1 {
+    font-size: 4rem;
+  }
+  .heading-2 {
+    font-size: 2.5rem;
+  }
+  .heading-3 {
+    font-size: 2.5rem;
+  }
+  .heading-4 {
+    font-size: .8rem;
+  }
+  .heading-5 {
+    font-size: .8rem;
+  }
+
+  /* Subheading */
+  .subheading-2 {
+    font-size: 0.875rem;
+  }
+
+  /* body text */
+  .text {
+    font-size: .8rem;
+  }
+
+  .nav-text {
+    font-size: .8rem;
+  }
+}
+
+/* ***************************************************
+**********************************  Container */
+.container{
+  width: 90%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+@media screen and (max-width: 900px) {
+  .container{
+      margin-top: 60px;
+      padding-bottom: 90px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .container{
+      padding-bottom: 20px;
   }
 }

@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import Navbar from "../../Components/Navbar/Navbar";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 export default function Home() {
   return (
     <div className='home'>
-      <Navbar home={true}/>
-      <div className='home-container'>
+      <Navbar home={true} />
+      <div className='home-container container'>
         <div className='home-group-text'>
           <h2 className='heading-5'>So you want to travel to</h2>
           <h1 className='heading-1'> Space</h1>
@@ -17,8 +18,9 @@ export default function Home() {
             world experience!
           </p>
         </div>
-
-        <button className='home-main-btn'>Explore</button>
+        <Link to='/destination'>
+          <button className='home-main-btn'>Explore</button>
+        </Link>
       </div>
     </div>
   );

@@ -1,0 +1,197 @@
+.destination {
+  min-height: 100vh;
+  background-image: url("./destination/background-destination-desktop.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-block: 30px;
+}
+@media screen and (max-width: 900px) {
+  .destination {
+    background-image: url("./destination/background-destination-tablet.jpg");
+    padding-block: 0px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .destination {
+    background-image: url("./destination/background-destination-mobile.jpg");
+  }
+}
+
+/* ******************************************************
+*****************************   Container */
+.destination-container {
+  margin-top: 20px;
+}
+@media screen and (max-width: 1150px) {
+  .destination-container {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .destination-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+/* ******************************************************
+*****************************   item */
+.destination-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1150px) {
+  .destination-item {
+    flex-direction: column;
+  }
+}
+
+/* ******************************************************
+*****************************   img-bloc */
+.destination-img-bloc {
+  width: 50%;
+}
+@media screen and (max-width: 1150px) {
+  .destination-img-bloc {
+    width: 50%;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .destination-img-bloc {
+    margin-right: 0;
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .destination-img-bloc {
+    margin-top: 30px;
+  }
+}
+
+/* ******************************************************
+*****************************   text-bloc */
+.destination-text-bloc {
+  width: 50%;
+  max-width: 550px;
+}
+@media screen and (max-width: 1150px) {
+  .destination-text-bloc {
+    margin-top: 40px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 900px) {
+  .destination-text-bloc {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+  }
+}
+
+/* ******************************************************
+*****************************   nav */
+.destination-nav ul {
+  display: flex;
+  align-items: center;
+}
+.destination-tab {
+  background: none;
+  border: none;
+  position: relative;
+  display: inline-block;
+  color: var(--primary-clr);
+  cursor: pointer;
+}
+.destination-nav li:not(:first-child){
+  margin-left: 20px;
+}
+.destination-tab:active {
+  color: var(--white-clr);
+}
+.destination-tab::before {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  background-color: var(--white-transparent-clr);
+  width: 4px;
+  height: 2px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.2s ease-in;
+}
+.destination-tab:hover::before {
+  opacity: 1;
+  width: 70%;
+  transition: all 0.2s ease-out;
+}
+.destination-tab:active::before {
+  background-color: var(--white-clr);
+}
+.destination-tab--active {
+  color: var(--white-clr);
+}
+.destination-tab--active::before {
+  content: "";
+  opacity: 1;
+  position: absolute;
+  background-color: var(--white-clr);
+  width: 70%;
+  height: 2px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.2s ease-in;
+}
+@media screen and (max-width: 1150px) {
+  .destination-nav ul {
+    justify-content: center;
+  }
+}
+/* ******************************************************
+*****************************   Numbers */
+.destination-numbers {
+  border-top: 1px solid var(--white-transparent-clr);
+  padding-top: 30px;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 1150px) {
+  .destination-numbers {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 900px) {
+  .destination-numbers {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .destination-numbers {
+    flex-direction: column;
+  }
+}
+
+/* ******************************************************
+*****************************   time */
+.destination-time {
+  margin-left: 100px;
+}
+@media screen and (max-width: 1150px) {
+  .destination-time {
+    margin-left: 120px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .destination-time {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+}
